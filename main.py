@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import random
+from keep_alive import keep_alive
+
 
 client = commands.Bot(command_prefix="!")
 
@@ -134,5 +136,6 @@ async def place_error(ctx, error):
         await ctx.send("Please enter a position you would like to mark.")
     elif isinstance(error, commands.BadArgument):
         await ctx.send("Please make sure to enter an integer.")
-
+        
+keep_alive()
 client.run("YOUR_TOKEN")
