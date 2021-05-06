@@ -1,2 +1,0 @@
-# the-tic
-ee
